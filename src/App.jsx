@@ -14,13 +14,13 @@ function App() {
   return (
     <div className="w-full min-h-screen relative">
       <div className="shadow-md fixed top-0 left-0 w-full bg-white text-gray-800 z-[100]">
-        <div className="max-w-[1440px] mx-auto px-5 md:px-10 h-[100px] flex items-center">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-10 h-[80px] flex items-center">
           <h1 className="text-xl md:text-2xl font-bold tracking-wide">
             Registration of the NGOs under National Trust Act 1999.
           </h1>
         </div>
       </div>
-      <div className="h-[230px]"></div>
+      <div className="h-[210px]"></div>
       <Stepper />
       {currentStepNumber === 1 && <StepOneForm />}
       {currentStepNumber === 2 && <StepTwoForm />}

@@ -1,7 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { updateCurrentStep } from "../store/formSlice";
-import { useForm } from "react-hook-form";
+import SelectFile from "./SelectFile";
+import toast from "react-hot-toast";
+// import { useForm } from "react-hook-form";
 
 const StepSixForm = () => {
   const data = [
@@ -38,70 +40,70 @@ const StepSixForm = () => {
       name: "doc7",
     },
     {
-      label: "Copy of Aadhar Card of Governing Body/Managing Body members ",
+      label: "Copy of Aadhar Card of Governing Body/Managing Body members",
       name: "doc8",
-    },
-    {
-      label:
-        "Copy of Form E signed and stamped by authorized signatory in each page ",
-      name: "doc9",
     },
   ];
   const dispatch = useDispatch();
-  const {
-    register,
-    reset,
-    handleSubmit,
-    formState: { errors, isSubmitSuccessful },
-  } = useForm();
+  // const {
+  //   register,
+  //   reset,
+  //   handleSubmit,
+  //   formState: { errors, isSubmitSuccessful },
+  // } = useForm();
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(updateCurrentStep(7));
+    scrollTo(0, 0);
   };
   const backBtnHandler = () => {
     dispatch(updateCurrentStep(5));
+    scrollTo(0, 0);
   };
   return (
     <div className="pt-10 mb-20">
-      <div className="max-w-[1440px] mx-auto p-5 rounded-lg shadow-2xl">
-        <form onSubmit={submitHandler}>
+      <div className="max-w-[1440px] mx-auto p-5">
+        <form onSubmit={submitHandler} className="p-5 rounded-lg shadow-2xl">
           <fieldset className="border border-gray-200 rounded-lg p-10 flex flex-col items-start gap-5 text-black">
             <legend className="py-3 px-9 border border-gray-200 rounded-lg text-blue-500 shadow-inner font-semibold">
-              Documentation
+              Attachments
             </legend>
             {data.map((data, ind) => (
-              <div className="flex gap-10 text-sm items-center" key={ind}>
-                <label htmlFor={data.name} className="font-semibold w-[400px]">
-                  {data.label}
-                  <span className="text-red-500">*</span>
-                </label>
-                <div className="flex items-center gap-2">
-                  <span>:</span>
-                  <input
-                    type="file"
-                    id={data.name}
-                    name={data.name}
-                    className="border border-gray-300 rounded-md p-2 outline-none"
-                    {...register(data.name, { required: true })}
-                  />
-
-                  {errors?.data?.name && (
-                    <p className="text-red-600">This field is required.</p>
-                  )}
-                </div>
-              </div>
+              <SelectFile data={data} key={ind} width={"w-[400px]"} />
             ))}
-            <div className="w-full flex justify-between">
+            <div className="flex gap-10 text-sm items-start">
+              <label htmlFor="doc9" className="font-semibold w-[400px]">
+                Copy of Form E signed and stamped by authorized signatory in
+                each page<span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="file"
+                  id="doc9"
+                  name="doc9"
+                  className="border border-gray-300 rounded-md p-2 outline-none shadow-inner"
+                />
+                <button
+                  type="button"
+                  className="bg-green-500 text-white py-[10.75px] px-9 text-sm font-semibold rounded-md cursor-pointer hover:bg-green-600 ms-5"
+                  onClick={() => toast.success("Form Dowloaded")}
+                >
+                  Download Form E
+                </button>
+              </div>
+            </div>
+            <div className="w-full flex justify-between py-5">
               <button
                 type="button"
-                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer"
+                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer hover:bg-blue-600"
                 onClick={backBtnHandler}
               >
                 Back
               </button>
               <input
                 type="submit"
-                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer"
+                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer hover:bg-blue-600"
                 value={"Save & Next"}
               />
             </div>

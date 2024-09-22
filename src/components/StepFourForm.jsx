@@ -1,116 +1,61 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { updateCurrentStep } from "../store/formSlice";
+import Dropdown from "./Dropdown";
+import SubHeading from "./SubHeading";
+import SelectFile from "./SelectFile";
+import NormalInput from "./NormalInput";
 
 const StepFourForm = () => {
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(updateCurrentStep(5));
+    scrollTo(0, 0);
   };
   const backBtnHandler = () => {
     dispatch(updateCurrentStep(3));
+    scrollTo(0, 0);
   };
   return (
     <div className="pt-10 mb-20">
-      <div className="max-w-[1440px] mx-auto p-5 rounded-lg shadow-2xl">
-        <form onSubmit={submitHandler}>
+      <div className="max-w-[1440px] mx-auto p-5">
+        <form onSubmit={submitHandler} className="p-5 rounded-lg shadow-2xl">
           <fieldset className="border border-gray-200 rounded-lg p-10 flex flex-col items-start gap-5 text-black">
             <legend className="py-3 px-9 border border-gray-200 rounded-lg text-blue-500 shadow-inner font-semibold">
               Establishment Details
             </legend>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Category of Building<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="online">Own</option>
-                  <option value="Offline">Rented</option>
-                </select>
-              </div>
-            </div>
-            <p>If, own building Attach proof (any one):</p>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Document Type<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="online"> Electicity Bill</option>
-                  <option value="Offline"> Water Connection Bill</option>
-                  <option value="Offline"> Landline Telephone Bill</option>
-                  <option value="Offline"> Any Other</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="disCer" className="font-semibold w-[200px]">
-                Attachment: Only PDF document
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="file"
-                  id="desCer"
-                  name="desCer"
-                  className="border border-gray-300 rounded-md p-2 outline-none"
-                  // {...register(data.name, { required: true })}
-                />
-                {/* 
-                {errors?.data?.name && (
-                  <p className="text-red-600">This field is required.</p>
-                )} */}
-              </div>
-            </div>
-            <p>if, Rented: </p>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Valid till
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="disCer" className="font-semibold w-[200px]">
-                Attach Rent Agreement: Only PDF document
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="file"
-                  id="desCer"
-                  name="desCer"
-                  className="border border-gray-300 rounded-md p-2 outline-none"
-                  // {...register(data.name, { required: true })}
-                />
-                {/* 
-                {errors?.data?.name && (
-                  <p className="text-red-600">This field is required.</p>
-                )} */}
-              </div>
-            </div>
-            <h2>Enter details of Governing Body/Managing Body Member:</h2>
+            <Dropdown
+              title={"Category of Building"}
+              options={["Own", "Rented"]}
+            />
+            <SubHeading heading={"If, own building Attach proof (any one)"} />
+            <Dropdown
+              title={"Document Type"}
+              options={[
+                "Electicity Bill",
+                "Water Connection Bill",
+                "Landline Telephone Bill",
+                "Any Other",
+              ]}
+            />
+            <SelectFile
+              data={{
+                label: "Attachment - Only PDF document",
+                name: "attachment",
+              }}
+            />
+            <SubHeading heading={"If, rented"} />
+            <NormalInput title={" Valid Till"} type={"date"} />
+            <SelectFile
+              data={{
+                label: "Attach Rent Agreement - Only PDF document",
+                name: "rent-aggrement",
+              }}
+            />
+            <SubHeading
+              heading={"Enter details of Governing Body/Managing Body Member"}
+            />
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
                 Name
@@ -286,16 +231,15 @@ const StepFourForm = () => {
                 </select>
               </div>
             </div>
-            <div className="w-full flex justify-between">
+            <div className="w-full flex justify-between py-5">
               <button
                 type="button"
-                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer"
+                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer hover:bg-blue-600"
               >
                 Add More
               </button>
             </div>
-
-            <h2>Enter details of Staff </h2>
+            <SubHeading heading={"Enter details of Staff"} />
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
                 CRR No., if available
@@ -465,17 +409,17 @@ const StepFourForm = () => {
                 />
               </div>
             </div>
-            <div className="w-full flex justify-between">
+            <div className="w-full flex justify-between py-5">
               <button
                 type="button"
-                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer"
+                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer hover:bg-blue-600"
                 onClick={backBtnHandler}
               >
                 Back
               </button>
               <input
                 type="submit"
-                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer"
+                className="bg-blue-500 text-white py-3 px-9  text-sm font-semibold rounded-md cursor-pointer hover:bg-blue-600"
                 value={"Save & Next"}
               />
             </div>
