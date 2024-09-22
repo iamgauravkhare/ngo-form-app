@@ -17,53 +17,13 @@ const StepTwoForm = () => {
         <form onSubmit={submitHandler}>
           <fieldset className="border border-gray-200 rounded-lg p-10 flex flex-col items-start gap-5 text-black">
             <legend className="py-3 px-9 border border-gray-200 rounded-lg text-blue-500 shadow-inner font-semibold">
-              General Details
+              Affiliation under different entity
             </legend>
+
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Name of Organization<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                PAN of Organization<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Address<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                State<span className="text-red-500">*</span>
+                (i) Category of Registration
+                <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <span>:</span>
@@ -72,70 +32,17 @@ const StepTwoForm = () => {
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 >
-                  <option value=""></option>
+                  <option value="">Voluntary Organization</option>
+                  <option value=""> Association of Parents of PwDs </option>
+                  <option value="">
+                    Association of Persons with Disability
+                  </option>
                 </select>
               </div>
             </div>
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                District<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value=""></option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Pin Code:<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Email ID<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Landline Number<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Name of the Head of Organization
+                a. Registration Number
                 <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
@@ -150,7 +57,97 @@ const StepTwoForm = () => {
             </div>
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Gender<span className="text-red-500">*</span>
+                b. Validity
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <h2>(ii) Registration under RPwD Act, 2016 </h2>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                a. Registration Number
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="text"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                b. Validity
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <div className="flex gap-10 text-sm items-center">
+              <h3 className="font-semibold w-[200px]">
+                (iii) Disability Dealt with
+                <span className="text-red-500">*</span>
+              </h3>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <div className="flex items-center gap-2">
+                  <label htmlFor="">Autism</label>
+                  <input type="checkbox" name="" id="" />
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <label htmlFor="">Cerebral Palsy </label>
+                  <input type="checkbox" name="" id="" />
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <label htmlFor=""> Intellectual Disability </label>
+                  <input type="checkbox" name="" id="" />
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2">
+                  <label htmlFor="">Multiple Disability</label>
+                  <input type="checkbox" name="" id="" />
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                (iv) Act under which Organization Registered
+                <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <span>:</span>
@@ -159,13 +156,16 @@ const StepTwoForm = () => {
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 >
-                  <option value=""></option>
+                  <option value=""> Society Act</option>
+                  <option value=""> Company Act </option>
+                  <option value="">Public Charitable Trust</option>
                 </select>
               </div>
             </div>
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Designation<span className="text-red-500">*</span>
+                a. Registration Number
+                <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <span>:</span>
@@ -179,7 +179,27 @@ const StepTwoForm = () => {
             </div>
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Mobile Number<span className="text-red-500">*</span>
+                b. Valid Till
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <h2>
+              (v) If, registered under Foreign Contribution Regulation Act
+              (FCRA)
+            </h2>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                a. Registration Number
+                <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <span>:</span>
@@ -189,16 +209,28 @@ const StepTwoForm = () => {
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 />
-                <div>
-                  <button className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold">
-                    Verify
-                  </button>
-                </div>
               </div>
             </div>
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Enter OTP<span className="text-red-500">*</span>
+                b. Valid Till
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <h2>(vi) If earlier registered with National Trust</h2>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                a. Registration Number
+                <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <span>:</span>
@@ -208,27 +240,92 @@ const StepTwoForm = () => {
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 />
-                <div>
-                  <button className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold">
-                    Submit OTP
-                  </button>
-                </div>
               </div>
             </div>
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Aadhar Number<span className="text-red-500">*</span>
+                b. Validity
+                <span className="text-red-500">*</span>
               </label>
               <div className="flex items-center gap-2">
                 <span>:</span>
                 <input
-                  type="text"
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+                <input
+                  type="date"
                   name="orgName"
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 />
               </div>
             </div>
+            <h2>(vii) If Voluntary Organization, Submit </h2>
+
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                a. Minimum income
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="number"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                b. Minimum Expenditure
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="number"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                c. Minimum donation & CSR fund
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="number"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                d. 12 A & 80 G certificate (optional)
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-2">
+                <span>:</span>
+                <input
+                  type="number"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+              </div>
+            </div>
+
             <div className="w-full flex justify-between">
               <button
                 type="button"
