@@ -88,7 +88,7 @@ const StepTwoForm = () => {
                 (iii) Disability Dealt with
                 <span className="text-red-500">*</span>
               </h3>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-5">
                 <span>:</span>
                 <div className="flex items-center gap-2">
                   <label htmlFor="">Autism</label>
