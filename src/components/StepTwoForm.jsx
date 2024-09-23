@@ -1,6 +1,9 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { updateCurrentStep } from "../store/formSlice";
+import SubHeading from "./SubHeading";
+import NormalInput from "./NormalInput";
+import Dropdown from "./Dropdown";
 
 const StepTwoForm = () => {
   const dispatch = useDispatch();
@@ -21,55 +24,31 @@ const StepTwoForm = () => {
             <legend className="py-3 px-9 border border-gray-200 rounded-lg text-blue-500 shadow-inner font-semibold">
               Affiliation under different entity
             </legend>
+            <Dropdown
+              title={"(i) Category of Registration"}
+              options={[
+                "Voluntary Organization",
+                "Association of Parents of PwDs",
+                "Association of Persons with Disability",
+              ]}
+            />
+            <NormalInput title={"a. Registration Number"} type={"text"} />
+            <div className="flex gap-10 text-sm items-center">
+              <label htmlFor="orgName" className="font-semibold w-[200px]">
+                B. Validity
+                <span className="text-red-500">*</span>
+              </label>
+              <div className="flex items-center gap-5">
+                <span>:</span>
+                <span>From</span>
+                <input
+                  type="date"
+                  name="orgName"
+                  id="orgName"
+                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
+                />
+                <span>To</span>
 
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                (i) Category of Registration
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="">Voluntary Organization</option>
-                  <option value=""> Association of Parents of PwDs </option>
-                  <option value="">
-                    Association of Persons with Disability
-                  </option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                a. Registration Number
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                b. Validity
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
                 <input
                   type="date"
                   name="orgName"
@@ -78,35 +57,24 @@ const StepTwoForm = () => {
                 />
               </div>
             </div>
-            <h2>(ii) Registration under RPwD Act, 2016 </h2>
+            <SubHeading heading={"(ii) Registration under RPwD Act, 2016"} />
+            <NormalInput title={"a. Registration Number"} type={"text"} />
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                a. Registration Number
+                B. Validity
                 <span className="text-red-500">*</span>
               </label>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-5">
                 <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                b. Validity
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
+                <span>From</span>
                 <input
                   type="date"
                   name="orgName"
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 />
+                <span>To</span>
+
                 <input
                   type="date"
                   name="orgName"
@@ -146,181 +114,46 @@ const StepTwoForm = () => {
                 </div>
               </div>
             </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                (iv) Act under which Organization Registered
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value=""> Society Act</option>
-                  <option value=""> Company Act </option>
-                  <option value="">Public Charitable Trust</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                a. Registration Number
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                b. Valid Till
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <h2>
-              (v) If, registered under Foreign Contribution Regulation Act
-              (FCRA)
-            </h2>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                a. Registration Number
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                b. Valid Till
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <h2>(vi) If earlier registered with National Trust</h2>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                a. Registration Number
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                b. Validity
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <h2>(vii) If Voluntary Organization, Submit </h2>
+            <Dropdown
+              title={"(iv) Act under which Organization Registered"}
+              options={[
+                "Society Act",
+                "Company Act",
+                "Public Charitable Trust",
+              ]}
+            />
+            <NormalInput title={"a. Registration Number"} type={"text"} />
+            <NormalInput title={"b. Valid Till"} type={"date"} />
+            <SubHeading
+              heading={
+                "(v) If, registered under Foreign Contribution Regulation Act (FCRA)"
+              }
+            />
 
+            <NormalInput title={"a. Registration Number"} type={"text"} />
+            <NormalInput title={"b. Valid Till"} type={"date"} />
+            <SubHeading
+              heading={"(vi) If earlier registered with National Trust"}
+            />
+            <NormalInput title={"a. Registration Number"} type={"text"} />
             <div className="flex gap-10 text-sm items-center">
               <label htmlFor="orgName" className="font-semibold w-[200px]">
-                a. Minimum income
+                B. Validity
                 <span className="text-red-500">*</span>
               </label>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-5">
                 <span>:</span>
+                <span>From</span>
                 <input
-                  type="number"
+                  type="date"
                   name="orgName"
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
                 />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                b. Minimum Expenditure
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
+                <span>To</span>
+
                 <input
-                  type="number"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                c. Minimum donation & CSR fund
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="number"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                d. 12 A & 80 G certificate (optional)
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="number"
+                  type="date"
                   name="orgName"
                   id="orgName"
                   className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
@@ -328,6 +161,15 @@ const StepTwoForm = () => {
               </div>
             </div>
 
+            <SubHeading heading={"(vii) If Voluntary Organization, Submit"} />
+            {[
+              "a. Minimum income",
+              "b. Minimum Expenditure",
+              "c. Minimum donation & CSR fund",
+              "d. 12 A & 80 G certificate (optional)",
+            ].map((data, i) => (
+              <NormalInput title={data} type={"number"} key={i} />
+            ))}
             <div className="w-full flex justify-between py-5">
               <button
                 type="button"

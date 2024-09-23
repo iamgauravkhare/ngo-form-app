@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { updateCurrentStep } from "../store/formSlice";
 import Dropdown from "./Dropdown";
 import NormalInput from "./NormalInput";
+import toast from "react-hot-toast";
 
 const StepOneForm = () => {
   const dispatch = useDispatch();
@@ -23,7 +24,11 @@ const StepOneForm = () => {
             <div className="flex gap-5">
               <NormalInput title={"Enter NGO Darpan ID"} type={"text"} />
               <div>
-                <button className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold">
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold"
+                  onClick={() => toast.success("Verified")}
+                >
                   Verify
                 </button>
               </div>
@@ -184,8 +189,12 @@ const StepOneForm = () => {
             <div className="flex gap-5">
               <NormalInput title={"Mobile Number"} type={"text"} />
               <div>
-                <button className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold">
-                  Verify
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold"
+                  onClick={() => toast.success("OTP Send")}
+                >
+                  Send OTP
                 </button>
               </div>
             </div>
@@ -193,8 +202,12 @@ const StepOneForm = () => {
               <NormalInput title={"Enter OTP"} type={"text"} />
 
               <div>
-                <button className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold">
-                  Submit OTP
+                <button
+                  type="button"
+                  className="px-6 py-2 bg-green-500 text-white rounded-md text-sm font-semibold"
+                  onClick={() => toast.success("Verified")}
+                >
+                  Verify
                 </button>
               </div>
             </div>
