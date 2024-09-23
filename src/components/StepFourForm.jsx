@@ -63,7 +63,6 @@ const StepFourForm = () => {
               title={"Qualification"}
               options={["Graduate", "Post Graduate", "Professional"]}
             />
-
             <NormalInput title={"Address"} type={"text"} />
             <Dropdown
               title={"State"}
@@ -205,73 +204,19 @@ const StepFourForm = () => {
                 "West Champaran",
               ]}
             />
-
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                OCCUPATION<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="">Business</option>
-                  <option value="">Profession</option>
-                  <option value="">Employment</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                ARE YOU, PARENT OR PERSON WITH DISABILITY ?
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="">PARENT</option>
-                  <option value="">PERSON WITH DISABILITY</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                IF PARENT, THEN NAME OF THE PWD{" "}
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                DISABILITY OF PWD
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  {/* <option value="">PARENT</option>
-                  <option value="">PERSON WITH DISABILITY</option> */}
-                </select>
-              </div>
-            </div>
+            <Dropdown
+              title={"Occupation"}
+              options={["Business", "Profession", "Employment"]}
+            />
+            <Dropdown
+              title={"ARE YOU, PARENT OR PERSON WITH DISABILITY ?"}
+              options={["PARENT", "PERSON WITH DISABILITY"]}
+            />
+            <NormalInput
+              title={"IF PARENT, THEN NAME OF THE PWD"}
+              type={"text"}
+            />
+            <Dropdown title={"DISABILITY OF PWD"} options={[]} />
             <div className="w-full flex justify-between py-5">
               <button
                 type="button"
