@@ -226,175 +226,40 @@ const StepFourForm = () => {
               </button>
             </div>
             <SubHeading heading={"Enter details of Staff"} />
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                CRR No., if available
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                JOB TYPE<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="online">Full Time</option>
-                  <option value="Offline">Part Time</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                If Part Time, frequency of visits per week
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                NAME
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                AADHAR NUMBER
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                DESIGNATION
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                Date of Birth
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                QUALIFICATION<span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <select
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                >
-                  <option value="online"> Post Graduate</option>
-                  <option value="Offline">Graduate</option>
-                  <option value="Offline">Senior Secondary</option>
-                  <option value="Offline"> High School</option>
-                </select>
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                DATE OF JOINING THE ORGANIZATION
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                SALARY / HONORARIUM (MONTHLY)
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="text"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
-            <div className="flex gap-10 text-sm items-center">
-              <label htmlFor="orgName" className="font-semibold w-[200px]">
-                DATE OF JOINING THE ORGANIZATION
-                <span className="text-red-500">*</span>
-              </label>
-              <div className="flex items-center gap-2">
-                <span>:</span>
-                <input
-                  type="date"
-                  name="orgName"
-                  id="orgName"
-                  className="border border-gray-200 rounded-md p-2 shadow-inner min-w-[400px]"
-                />
-              </div>
-            </div>
+            <NormalInput title={"CRR No., if available"} type={"text"} />
+
+            <Dropdown title={"JOB TYPE"} options={["Full Time", "Part Time"]} />
+
+            <NormalInput
+              title={"If Part Time, frequency of visits per week"}
+              type={"text"}
+            />
+            <NormalInput title={"Name"} type={"text"} />
+            <NormalInput title={"Aadhar Number"} type={"text"} />
+            <NormalInput title={"Designation"} type={"text"} />
+            <NormalInput title={"Date of Birth"} type={"date"} />
+            <Dropdown
+              title={"QUALIFICATION"}
+              options={[
+                "Post Graduate",
+                "Graduate",
+                "Senior Secondary",
+                "High School",
+              ]}
+            />
+            <NormalInput
+              title={"DATE OF JOINING THE ORGANIZATION"}
+              type={"date"}
+            />
+            <NormalInput
+              title={"SALARY / HONORARIUM (MONTHLY)"}
+              type={"text"}
+            />
+            <NormalInput
+              title={"DATE OF JOINING THE ORGANIZATION"}
+              type={"date"}
+            />
+
             <div className="w-full flex justify-between py-5">
               <button
                 type="button"
